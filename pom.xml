@@ -108,11 +108,6 @@
   </build>
 
   <profiles>
-    <profile>
-	    <id>nexus</id>
-	    <username>admin</username>
-	    <password>admin123</password>
-	  </profile>
      <profile>
       <id>sonar-coverage</id>
       <activation>
