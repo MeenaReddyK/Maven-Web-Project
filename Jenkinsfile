@@ -8,16 +8,24 @@ node {
        }
 
        stage('BuildArtifact'){
+	       def mvn_version = 'M2_HOME'
+               withEnv( ["PATH+MAVEN=${tool mvn_version}/bin"] ) 
+	       {
 
          // bat 'mvn install'
 	       
 	       sh 'mvn clean'
        }
+       }
 	   
       stage('Sonar') {
+	      def mvn_version = 'M2_HOME'
+               withEnv( ["PATH+MAVEN=${tool mvn_version}/bin"] ) 
+	      {
                     //add stage sonar
                    // sh 'mvn sonar:sonar'
                 }
+      }
 	
        
 }
