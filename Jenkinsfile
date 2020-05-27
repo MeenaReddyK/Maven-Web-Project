@@ -2,7 +2,7 @@
 
 node {
 	   
-	stage('Checkout'){
+	stage('Checkout SCM'){
 
           checkout scm
        }
